@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { EditTaskComponent } from './edit-task/edit-task.component';
 import { FormsModule } from '@angular/forms';
+import { NewTaskComponent } from './new-task/new-task.component';
+import { CompletenessPipe } from './completeness.pipe';
 
 
 
@@ -11,7 +13,9 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     TaskListComponent,
-    EditTaskComponent
+    EditTaskComponent,
+    NewTaskComponent,
+    CompletenessPipe,
   ],
   imports: [
     BrowserModule,

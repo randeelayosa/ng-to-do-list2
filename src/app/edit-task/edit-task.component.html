@@ -1,6 +1,7 @@
 <div *ngIf="childSelectedTask">
   <h3>{{selectedTask.description}}</h3>
   <p>Task Complete? {{selectedTask.done}}</p>
+{{consoleLOG(selectedTask)}}
   <h3>Edit Task</h3>
   <label>Enter Task Description:</label>
   <input [(ngModel)]="childSelectedTask.description">

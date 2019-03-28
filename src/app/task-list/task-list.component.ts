@@ -12,15 +12,8 @@ export class TaskListComponent {
 
    editButtonClicked(taskToEdit: Task) {
      this.clickSender.emit(taskToEdit);
-    
+
    }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-
 
     priorityColor(currentTask){
       if (currentTask.priority === 3){
@@ -32,5 +25,18 @@ export class TaskListComponent {
       }
     }
 
+    filterByCompleteness: string = "incompleteTasks";
+
+    onChange(optionFromMenu) {
+      this.filterByCompleteness = optionFromMenu;
+    }
+
+    toggleDone(clickedTask: Task, setCompleteness: boolean) {
+       clickedTask.done = setCompleteness;
+     }
+     
+     consoleLOG(thisArgument) {
+       console.log(thisArgument);
+     }
 
 }
